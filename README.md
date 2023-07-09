@@ -342,6 +342,7 @@ response = requests.post(url=url, headers=headers, params=params)
 ## Проверка выплаты
 	Проверка выплаты
 POST https://tegro.money/api/withdrawal/
+### Пример запроса:
 ```
 url = 'https://tegro.money/api/withdrawal/'
 
