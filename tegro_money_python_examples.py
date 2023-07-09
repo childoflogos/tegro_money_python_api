@@ -1,8 +1,9 @@
 import json
-import time
 import requests
 import hashlib
+from hashlib import sha256
 import config
+import hmac
 
 
 #//////////////
@@ -39,11 +40,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -74,11 +74,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -128,11 +127,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -170,11 +168,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -215,11 +212,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -279,11 +275,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -303,11 +298,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
@@ -328,11 +322,10 @@ params = {
 }
 
 body = json.dumps(params)
-message = config.api_key + body
-sign = hashlib.sha256(message.encode()).hexdigest()
+sign = hmac.new(config.api_key.encode(), body.encode(), sha256).hexdigest()
 
 headers = {
-    "Authorization": f"{sign}",
+    "Authorization": f"Bearer {sign}",
     "Content-Type": "application/json"
 }
 
